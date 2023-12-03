@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.activity.DetailActivity">
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Chi tiet san pham"
+        android:background="#2196F3"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+    
+    <LinearLayout
+        android:id="@+id/layout1"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:src="@drawable/ic_logo"
+            android:id="@+id/imgchitiet"
+            android:layout_width="150dp"
+            android:layout_height="200dp"/>
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="ExtraText">
+            
+           <TextView
+               android:id="@+id/tensp"
+               android:textStyle="bold"
+               android:textSize="20dp"
+               android:text="Ten San Pham"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/giasp"
+                android:textColor="#f20"
+                android:layout_marginTop="20dp"
+                android:text="Gia 30.000VND"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+m
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="#151212"
+            android:layout_marginTop="15dp"
+            android:text="Thong tin san pham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+        <TextView
+            android:id="@+id/tvthongtinsanpham"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
